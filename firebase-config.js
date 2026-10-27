@@ -3,7 +3,7 @@
 // It ends in ".firebasedatabase.app" (shown at the top of the Realtime Database).
 
 //Denis
-//const baseUrl = "https://join-3222-default-rtdb.europe-west1.firebasedatabase.app/";
+const baseUrl = "https://join-3222-default-rtdb.europe-west1.firebasedatabase.app/";
 
 //Nick
-const baseUrl = "https://join-fe7b4-default-rtdb.europe-west1.firebasedatabase.app/";
+//const baseUrl = "https://join-fe7b4-default-rtdb.europe-west1.firebasedatabase.app/";
