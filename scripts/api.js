@@ -84,7 +84,7 @@ async function deleteContacts(id) {
  * @returns {Promise<Object>} All tasks in JSON format from the database, keyed by task id.
  */
 async function getNextTaskId() {
-    let response = await fetch(baseUrl + "/tasks.json");
+    let response = await fetch(baseUrl + "tasks.json");
     let tasks = await response.json();
 
     return tasks
@@ -99,14 +99,14 @@ async function getNextTaskId() {
  * @returns {Promise<Object>} The database's response regarding the task to be saved.
  */
 async function postTask(path ="", data = {}){
-    let response = await fetch(baseUrl + path + ".json", {
+    let response = await fetch(baseUrl + path.replace(/^\//, "") + ".json", {
         method: "PUT",
-        header: {
+        headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(data)
     });
-    return responseToJson = await response.json
+    return await response.json();
 }
 
 /**
